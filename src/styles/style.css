@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+.navibar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100%;
+}
 .navibar .navibar-left {
   height: 100vh;
   width: 20rem;
@@ -33,5 +40,46 @@
   gap: 3rem;
   list-style: none;
   font-size: 2rem;
+}
+.navibar .navibar-left .navibar-menu ul li {
   cursor: pointer;
+}
+.navibar .navibar-right {
+  width: 20rem;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navibar .navibar-right ul {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  list-style: none;
+  font-size: 2rem;
+}
+.navibar .navibar-right ul li {
+  cursor: pointer;
+}
+
+.homepage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homepage .homepage-left {
+  width: 30%;
+}
+.homepage .homepage-right .homepageImg {
+  width: 10rem;
+  height: 10rem;
+  overflow: hidden;
+}
+.homepage .homepage-right .homepageImg img {
+  height: 11rem;
 }/*# sourceMappingURL=style.css.map */

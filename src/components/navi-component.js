@@ -18,6 +18,17 @@ const naviComponent = () => {
           </ul>
         </div>
       </div>
+
+      <div className="navibar-right">
+        <ul>
+          <li>天氣api</li>
+          <li>棒球api</li>
+          <li>足球api</li>
+          <li>計算機</li>
+          <li>月曆</li>
+          <li>等等</li>
+        </ul>
+      </div>
     </div>
   );
 };

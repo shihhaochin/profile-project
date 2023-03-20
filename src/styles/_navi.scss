@@ -1,4 +1,9 @@
 .navibar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100%;
   .navibar-left {
     height: 100vh;
     width: 20rem;
@@ -7,6 +12,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     .avatarImg {
       height: 10rem;
       width: 10rem;
@@ -26,6 +32,28 @@
         gap: 3rem;
         list-style: none;
         font-size: 2rem;
+        li {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .navibar-right {
+    width: 20rem;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    ul {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      list-style: none;
+      font-size: 2rem;
+      li {
         cursor: pointer;
       }
     }
