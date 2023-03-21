@@ -1,0 +1,67 @@
+.skill-bg {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: purple;
+  .skill-box {
+    .skill-html {
+      img {
+        height: 50px;
+      }
+      .html-circle-container {
+        background-color: #fff;
+        width: 420px;
+        padding: 50px 0;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        .circular-progress {
+          position: relative;
+          height: 250px;
+          width: 250px;
+          border-radius: 50%;
+          animation: turnCircle 2s linear forwards;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .progress-value {
+            position: relative;
+            font-size: 40px;
+            font-weight: 600;
+            color: rgb(210, 105, 30);
+            display: flex;
+          }
+        }
+        .circular-progress::before {
+          content: "";
+          position: absolute;
+          height: 210px;
+          width: 210px;
+          border-radius: 50%;
+          background-color: white;
+        }
+      }
+    }
+  }
+}
+
+@keyframes turnCircle {
+  0% {
+    background: conic-gradient(rgb(210, 105, 30) 0deg, #ededed 0deg);
+  }
+  25% {
+    background: conic-gradient(rgb(210, 105, 30) 76.5deg, #ededed 0deg);
+  }
+  50% {
+    background: conic-gradient(rgb(210, 105, 30) 153deg, #ededed 0deg);
+  }
+  75% {
+    background: conic-gradient(rgb(210, 105, 30) 229.5deg, #ededed 0deg);
+  }
+  100% {
+    background: conic-gradient(rgb(210, 105, 30) 306deg, #ededed 0deg);
+  }
+}
