@@ -240,48 +240,255 @@
 .skill-bg {
   width: 100%;
   height: 100vh;
+  background-color: black;
+}
+.skill-bg .skill-box {
   display: flex;
+  min-height: 100vh;
   justify-content: center;
   align-items: center;
-  background-color: purple;
+  flex-wrap: wrap;
+}
+.skill-bg .skill-box .skill-html {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .skill-bg .skill-box .skill-html img {
-  height: 50px;
+  height: 100px;
 }
 .skill-bg .skill-box .skill-html .html-circle-container {
-  background-color: #fff;
   width: 420px;
   padding: 50px 0;
   border-radius: 8px;
   display: flex;
   justify-content: center;
 }
-.skill-bg .skill-box .skill-html .html-circle-container .circular-progress {
+.skill-bg .skill-box .skill-html .html-circle-container .html-circular-progress {
   position: relative;
-  height: 250px;
-  width: 250px;
+  height: 200px;
+  width: 200px;
   border-radius: 50%;
   animation: turnCircle 2s linear forwards;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.skill-bg .skill-box .skill-html .html-circle-container .circular-progress .progress-value {
+.skill-bg .skill-box .skill-html .html-circle-container .html-circular-progress .html-progress-value {
   position: relative;
   font-size: 40px;
   font-weight: 600;
   color: rgb(210, 105, 30);
   display: flex;
 }
-.skill-bg .skill-box .skill-html .html-circle-container .circular-progress::before {
+.skill-bg .skill-box .skill-html .html-circle-container .html-circular-progress::before {
   content: "";
   position: absolute;
-  height: 210px;
-  width: 210px;
+  height: 170px;
+  width: 170px;
   border-radius: 50%;
-  background-color: white;
+  background-color: black;
+}
+.skill-bg .skill-box .skill-html .html-bar-container {
+  height: 10rem;
+  width: 50rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.skill-bg .skill-box .skill-html .html-bar-container .html-bar {
+  height: 2rem;
+  width: 50rem;
+  background-color: #ededed;
+  border-radius: 3rem;
+  position: relative;
+}
+.skill-bg .skill-box .skill-html .html-bar-container .html-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 3rem;
+  background-color: rgb(210, 105, 30);
+  animation: turnBar 2s linear forwards;
+}
+.skill-bg .skill-box .skill-html .html-bar-container .html-bar-value {
+  font-size: 35px;
+  color: rgb(210, 105, 30);
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 80%;
+}
+.skill-bg .skill-box .skill-css {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.skill-bg .skill-box .skill-css img {
+  height: 100px;
+}
+.skill-bg .skill-box .skill-css .css-circle-container {
+  width: 420px;
+  padding: 50px 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+}
+.skill-bg .skill-box .skill-css .css-circle-container .css-circular-progress {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  animation: turnCircletwo 2s linear forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skill-bg .skill-box .skill-css .css-circle-container .css-circular-progress .css-progress-value {
+  position: relative;
+  font-size: 40px;
+  font-weight: 600;
+  color: rgb(30, 102, 210);
+  display: flex;
+}
+.skill-bg .skill-box .skill-css .css-circle-container .css-circular-progress::before {
+  content: "";
+  position: absolute;
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+  background-color: black;
+}
+.skill-bg .skill-box .skill-css .css-bar-container {
+  height: 10rem;
+  width: 50rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.skill-bg .skill-box .skill-css .css-bar-container .css-bar {
+  height: 2rem;
+  width: 50rem;
+  background-color: #ededed;
+  border-radius: 3rem;
+  position: relative;
+}
+.skill-bg .skill-box .skill-css .css-bar-container .css-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 3rem;
+  background-color: rgb(30, 102, 210);
+  animation: turnBar 2s linear forwards;
+}
+.skill-bg .skill-box .skill-css .css-bar-container .css-bar-value {
+  font-size: 35px;
+  color: rgb(30, 102, 210);
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 80%;
+}
+.skill-bg .skill-box .skill-js {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.skill-bg .skill-box .skill-js img {
+  height: 100px;
+}
+.skill-bg .skill-box .skill-js .js-circle-container {
+  width: 420px;
+  padding: 50px 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+}
+.skill-bg .skill-box .skill-js .js-circle-container .js-circular-progress {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  animation: turnCirclethree 2s linear forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skill-bg .skill-box .skill-js .js-circle-container .js-circular-progress .js-progress-value {
+  position: relative;
+  font-size: 40px;
+  font-weight: 600;
+  color: rgb(210, 165, 30);
+  display: flex;
+}
+.skill-bg .skill-box .skill-js .js-circle-container .js-circular-progress::before {
+  content: "";
+  position: absolute;
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+  background-color: black;
+}
+.skill-bg .skill-box .skill-js .js-bar-container {
+  height: 10rem;
+  width: 50rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.skill-bg .skill-box .skill-js .js-bar-container .js-bar {
+  height: 2rem;
+  width: 50rem;
+  background-color: #ededed;
+  border-radius: 3rem;
+  position: relative;
+}
+.skill-bg .skill-box .skill-js .js-bar-container .js-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 3rem;
+  background-color: rgb(210, 165, 30);
+  animation: turnBar 2s linear forwards;
+}
+.skill-bg .skill-box .skill-js .js-bar-container .js-bar-value {
+  font-size: 35px;
+  color: rgb(210, 165, 30);
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 80%;
 }
 
+@keyframes turnCircletwo {
+  0% {
+    background: conic-gradient(rgb(30, 102, 210) 0deg, #ededed 0deg);
+  }
+  25% {
+    background: conic-gradient(rgb(30, 102, 210) 76.5deg, #ededed 0deg);
+  }
+  50% {
+    background: conic-gradient(rgb(30, 102, 210) 153deg, #ededed 0deg);
+  }
+  75% {
+    background: conic-gradient(rgb(30, 102, 210) 229.5deg, #ededed 0deg);
+  }
+  100% {
+    background: conic-gradient(rgb(30, 102, 210) 306deg, #ededed 0deg);
+  }
+}
 @keyframes turnCircle {
   0% {
     background: conic-gradient(rgb(210, 105, 30) 0deg, #ededed 0deg);
@@ -297,5 +504,30 @@
   }
   100% {
     background: conic-gradient(rgb(210, 105, 30) 306deg, #ededed 0deg);
+  }
+}
+@keyframes turnCirclethree {
+  0% {
+    background: conic-gradient(rgb(210, 165, 30) 0deg, #ededed 0deg);
+  }
+  25% {
+    background: conic-gradient(rgb(210, 165, 30) 76.5deg, #ededed 0deg);
+  }
+  50% {
+    background: conic-gradient(rgb(210, 165, 30) 153deg, #ededed 0deg);
+  }
+  75% {
+    background: conic-gradient(rgb(210, 165, 30) 229.5deg, #ededed 0deg);
+  }
+  100% {
+    background: conic-gradient(rgb(210, 165, 30) 306deg, #ededed 0deg);
+  }
+}
+@keyframes turnBar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
   }
 }/*# sourceMappingURL=style.css.map */
