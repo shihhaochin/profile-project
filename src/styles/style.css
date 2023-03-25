@@ -6,19 +6,17 @@
 
 .navibar {
   position: fixed;
-  display: flex;
-  justify-content: space-between;
-  height: 100vh;
   width: 100%;
+  z-index: 90;
 }
 .navibar .navibar-left {
   height: 100vh;
-  width: 20rem;
-  background-color: black;
+  width: 21rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
 }
 .navibar .navibar-left .avatarImg {
   height: 10rem;
@@ -37,21 +35,78 @@
   color: white;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
   list-style: none;
   font-size: 2rem;
+  transform: skewY(-15deg);
 }
 .navibar .navibar-left .navibar-menu ul li {
   cursor: pointer;
+  width: 250px;
+  background-color: black;
+  padding: 15px;
+  transition: 0.5s;
+  position: relative;
+}
+.navibar .navibar-left .navibar-menu ul li a,
+.navibar .navibar-left .navibar-menu ul li a:link,
+.navibar .navibar-left .navibar-menu ul li a:visited {
+  color: white;
+  text-decoration: none;
+}
+.navibar .navibar-left .navibar-menu ul li a span {
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 40px;
+  height: 100%;
+  background-color: #3e3f46;
+  filter: brightness(0.7);
+  transform-origin: right;
+  transform: skewY(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navibar .navibar-left .navibar-menu ul li a span img {
+  height: 2rem;
+}
+.navibar .navibar-left .navibar-menu ul li:hover {
+  transform: translateX(50px);
+}
+.navibar .navibar-left .navibar-menu ul li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 40px;
+  height: 100%;
+  background-color: #3e3f46;
+  filter: brightness(0.7);
+  transform-origin: right;
+  transform: skewY(45deg);
+}
+.navibar .navibar-left .navibar-menu ul li::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #3e3f46;
+  filter: brightness(0.9);
+  transform-origin: bottom;
+  transform: skewX(45deg);
 }
 .navibar .navibar-right {
-  width: 20rem;
+  width: 15rem;
   height: 100vh;
   background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  right: 0;
 }
 .navibar .navibar-right ul {
   color: white;
@@ -620,4 +675,92 @@
   height: 100%;
   transform: perspective(5em) rotateX(40deg) scale(1, 0.3);
   filter: blur(3em);
+}
+
+.contactme-bg {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.contactme-bg .contactme-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.contactme-bg .contactme-title h1 {
+  font-size: 5rem;
+}
+.contactme-bg .contactme-title p {
+  font-size: 3rem;
+}
+.contactme-bg .contactme-title .contact-card-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.contactme-bg .contactme-title .contact-card-box .contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.contactme-bg .contactme-title .contact-card-box .contact-card img {
+  height: 100px;
+}
+.contactme-bg .contactme-title .contact-card-box .contact-card h3 {
+  font-size: 2rem;
+}
+.contactme-bg .contactme-title .contact-card-box .contact-card p {
+  font-size: 1rem;
+}
+.contactme-bg .contactUsbg .contactUsContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 15rem;
+}
+.contactme-bg .contactUsbg .contactUsContainer .contactUs {
+  width: 60vw;
+  text-align: center;
+}
+.contactme-bg .contactUsbg .contactUsContainer .contactUs p {
+  font-size: 5rem;
+  color: rgb(7, 68, 66);
+}
+.contactme-bg .contactUsbg .contactUsContainer .contactUs form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contactme-bg .contactUsbg .contactUsContainer .contactUs form input {
+  width: 50vw;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 1rem;
+  padding: 2px 4px;
+  color: #5ff7e8;
+  outline: none;
+}
+.contactme-bg .contactUsbg .contactUsContainer .contactUs form textarea {
+  width: 50vw;
+  height: 20vh;
+  font-size: 2rem;
+  padding: 2px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #5ff7e8;
+  outline: none;
+}
+.contactme-bg .contactUsbg .contactUsContainer .contactUs form button {
+  padding: 1rem 5rem;
+  margin-top: 1rem;
+  border-radius: 45px;
+  color: white;
+  background: linear-gradient(to top right, #008080, #191970);
+}
+.contactme-bg .contactUsbg .contactUsContainer .contactUs form button:hover {
+  transform: scale(1.1);
 }/*# sourceMappingURL=style.css.map */

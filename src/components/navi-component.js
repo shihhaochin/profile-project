@@ -1,5 +1,12 @@
 import React from "react";
 import avatarImg from "../img/aboutUs.png";
+import homeImg from "../img/home.png";
+import userImg from "../img/user.png";
+import skillImg from "../img/skills.png";
+import documentImg from "../img/document.png";
+import smartphoneImg from "../img/smartphone-call.png";
+
+import { Link } from "react-router-dom";
 
 const naviComponent = () => {
   return (
@@ -10,11 +17,46 @@ const naviComponent = () => {
         </div>
         <div className="navibar-menu">
           <ul>
-            <li>Home</li>
-            <li>About Me</li>
-            <li>Skill</li>
-            <li>Portfolio</li>
-            <li>Contact Me</li>
+            <li style={{ zIndex: "6" }}>
+              <Link to="/">
+                <span>
+                  <img src={homeImg} alt="home-Img" />
+                </span>
+                Home
+              </Link>
+            </li>
+            <li style={{ zIndex: "5" }}>
+              <Link to="/aboutme">
+                <span>
+                  <img src={userImg} alt="user-img" />
+                </span>
+                About Me
+              </Link>
+            </li>
+            <li style={{ zIndex: "4" }}>
+              <Link to="/skill">
+                <span>
+                  <img src={skillImg} alt="skill-img" />
+                </span>
+                Skill
+              </Link>
+            </li>
+            <li style={{ zIndex: "3" }}>
+              <Link to="/portfolio">
+                <span>
+                  <img src={documentImg} alt="document-img" />
+                </span>
+                Portfolio
+              </Link>
+            </li>
+            <li style={{ zIndex: "2" }}>
+              <Link to="/contact">
+                <span>
+                  <img src={smartphoneImg} alt="smartphone-img" />
+                </span>
+                Contact Me
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

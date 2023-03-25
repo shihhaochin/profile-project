@@ -1,4 +1,5 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import NaviComponent from "./components/navi-component";
 import Homepage from "./pages/homepage";
 import Aboutpage from "./pages/aboutpage";
@@ -11,11 +12,14 @@ function App() {
   return (
     <div className="App">
       <NaviComponent />
-      <Homepage />
-      <Aboutpage />
-      <Skillpage />
-      <Portfoliopage />
-      <Contactmepage />
+
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/aboutme" element={<Aboutpage />} />
+        <Route path="/skill" element={<Skillpage />} />
+        <Route path="/portfolio" element={<Portfoliopage />} />
+        <Route path="/contact" element={<Contactmepage />} />
+      </Routes>
     </div>
   );
 }
