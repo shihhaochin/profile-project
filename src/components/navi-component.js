@@ -15,6 +15,16 @@ const naviComponent = () => {
         <div className="avatarImg">
           <img src={avatarImg} alt="avatarImg" />
         </div>
+        <div className="avatar-text">
+          <h2>CHIN SHIH HAO</h2>
+          <ul>
+            <li>Birthday : 8 October 1989 </li>
+            <li>Age : 33</li>
+            <li>Email : shihhao108@gmail.com</li>
+            <li>Phone : 0916952516</li>
+            <li>City : Taipei</li>
+          </ul>
+        </div>
         <div className="navibar-menu">
           <ul>
             <li style={{ zIndex: "6" }}>

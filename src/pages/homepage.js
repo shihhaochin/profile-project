@@ -1,5 +1,6 @@
 import React from "react";
 import TypeWriterEffect from "react-typewriter-effect";
+import { SvgBlob } from "react-svg-blob";
 
 const homepage = () => {
   return (
@@ -27,8 +28,19 @@ const homepage = () => {
             maiores eos corrupti, laboriosam unde fuga ex dolores ipsa minus
             pariatur labore consequuntur.
           </p>
-          <button>Contact Me</button>
+          <button>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Contact Me
+          </button>
+
+          <div className="blob">
+            <SvgBlob variant="solid" color="#000000" />
+          </div>
         </div>
+
         <div className="homepage-right">
           <div className="cube-box">
             <div className="cube cube-1">
