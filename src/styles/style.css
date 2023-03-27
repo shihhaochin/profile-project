@@ -367,10 +367,13 @@
 }
 .aboutmepage {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #0c192c;
+  position: relative;
+  z-index: 1;
 }
 .aboutmepage .aboutme-box .timeline {
   position: relative;
@@ -414,7 +417,7 @@
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-left: 15px solid black;
+  border-left: 15px solid white;
   right: -15px;
 }
 .aboutmepage .aboutme-box .timeline .container .text-box .right-container-arrow {
@@ -425,7 +428,7 @@
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-right: 15px solid black;
+  border-right: 15px solid white;
   left: -15px;
 }
 .aboutmepage .aboutme-box .timeline .container:nth-child(1) {
@@ -460,14 +463,56 @@
   position: absolute;
   width: 6px;
   height: 100%;
-  background-color: black;
+  background-color: white;
   top: 0;
   left: 50%;
   margin-left: -3px;
   z-index: -1;
   animation: moveline 6s linear forwards;
 }
+.aboutmepage .aboutme-bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: -1;
+}
+.aboutmepage .aboutme-bg .bubbles-box {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.aboutmepage .aboutme-bg .bubbles-box .bubbles {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.aboutmepage .aboutme-bg .bubbles-box .bubbles span {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: #4fc3dc;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px rgba(79, 195, 220, 0.2666666667), 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+  animation: rainup 15s linear infinite;
+  animation-duration: calc(125s / var(--i));
+}
+.aboutmepage .aboutme-bg .bubbles-box .bubbles span:nth-child(even) {
+  background-color: #ff2d75;
+  box-shadow: 0 0 0 10px rgba(255, 45, 117, 0.2666666667), 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+}
 
+@keyframes rainup {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
 @keyframes moveline {
   0% {
     height: 0;
@@ -488,7 +533,7 @@
 }
 @media screen and (max-width: 1800px) {
   .timeline {
-    margin: 50px auto !important;
+    transform: translateX(25%) !important;
   }
   .timeline .container {
     width: 50% !important;
@@ -502,7 +547,7 @@
     left: 10px !important;
   }
   .timeline .right-container .right-container-arrow {
-    border-right: 15px solid black !important;
+    border-right: 15px solid white !important;
     border-left: 0 !important;
     left: -15px !important;
   }
@@ -510,7 +555,7 @@
     left: 10px !important;
   }
   .timeline .left-container .left-container-arrow {
-    border-right: 15px solid black !important;
+    border-right: 15px solid white !important;
     border-left: 0 !important;
     left: -15px !important;
   }
