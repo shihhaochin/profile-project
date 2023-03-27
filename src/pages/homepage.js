@@ -27,7 +27,7 @@ const homepage = () => {
             maiores eos corrupti, laboriosam unde fuga ex dolores ipsa minus
             pariatur labore consequuntur.
           </p>
-          <button>了解更多</button>
+          <button>Contact Me</button>
         </div>
         <div className="homepage-right">
           <div className="cube-box">
