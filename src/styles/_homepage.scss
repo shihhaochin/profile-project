@@ -34,6 +34,23 @@
       p {
         color: white;
       }
+      .socialImg {
+        display: flex;
+        gap: 3rem;
+        img {
+          height: 40px;
+          background-color: white;
+          padding: 3px;
+          border-radius: 50%;
+          cursor: pointer;
+          transition: 0.5s;
+        }
+        img:hover {
+          background-color: aqua;
+          box-shadow: 0 0 1rem aqua;
+          transform: scale(1.1);
+        }
+      }
       button {
         font-size: 2rem;
         padding: 1rem 5rem;
@@ -41,7 +58,7 @@
         cursor: pointer;
         background-color: transparent;
         position: relative;
-        margin-top: 5rem;
+        margin-top: 1rem;
         color: #4598e0;
         border: none;
         transition: 0.2s;

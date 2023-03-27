@@ -178,6 +178,23 @@
 .homepage-bg .homepage .homepage-left p {
   color: white;
 }
+.homepage-bg .homepage .homepage-left .socialImg {
+  display: flex;
+  gap: 3rem;
+}
+.homepage-bg .homepage .homepage-left .socialImg img {
+  height: 40px;
+  background-color: white;
+  padding: 3px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.homepage-bg .homepage .homepage-left .socialImg img:hover {
+  background-color: aqua;
+  box-shadow: 0 0 1rem aqua;
+  transform: scale(1.1);
+}
 .homepage-bg .homepage .homepage-left button {
   font-size: 2rem;
   padding: 1rem 5rem;
@@ -185,7 +202,7 @@
   cursor: pointer;
   background-color: transparent;
   position: relative;
-  margin-top: 5rem;
+  margin-top: 1rem;
   color: #4598e0;
   border: none;
   transition: 0.2s;

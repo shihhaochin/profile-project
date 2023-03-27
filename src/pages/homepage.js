@@ -1,6 +1,10 @@
 import React from "react";
 import TypeWriterEffect from "react-typewriter-effect";
 import { SvgBlob } from "react-svg-blob";
+import facebookImg from "../img/facebookImg.png";
+import instagramImg from "../img/instagramImg.png";
+import googleImg from "../img/googleImg.png";
+import twitterImg from "../img/twitterImg.png";
 
 const homepage = () => {
   return (
@@ -28,6 +32,12 @@ const homepage = () => {
             maiores eos corrupti, laboriosam unde fuga ex dolores ipsa minus
             pariatur labore consequuntur.
           </p>
+          <div className="socialImg">
+            <img src={facebookImg} alt="facebook-img" />
+            <img src={instagramImg} alt="instagram=img" />
+            <img src={googleImg} alt="google-img" />
+            <img src={twitterImg} alt="twitter-img" />
+          </div>
           <button>
             <span></span>
             <span></span>
