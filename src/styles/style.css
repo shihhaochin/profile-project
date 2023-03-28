@@ -1211,52 +1211,145 @@
 }
 .portfolio-bg {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: black;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  gap: 5rem;
 }
-.portfolio-bg .portfolio-box {
-  width: 1800px;
+.portfolio-bg .portfolio-title {
+  text-align: center;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 1;
+}
+.portfolio-bg .portfolio-title h1 {
+  color: white;
+  font-size: 5rem;
+}
+.portfolio-bg .portfolio-title h2 {
+  color: white;
+  font-size: 2rem;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  z-index: 3;
+  background-color: black;
+  position: relative;
+  padding: 1rem 0;
+}
+.portfolio-bg .portfolio-title span {
+  height: 2px;
+  width: 800px;
+  position: absolute;
+  top: 73%;
+  left: -75%;
+  background-color: white;
+  z-index: -1;
+}
+
+.portfolio-box {
+  max-width: 1800px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 15rem;
+  row-gap: 20rem;
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
+  margin: 0 18rem;
+  margin-bottom: 15rem;
 }
-.portfolio-bg .portfolio-box .portfolio-card {
+.portfolio-box .portfolio-card {
   background-color: white;
-  width: 300px;
+  width: 500px;
   height: 300px;
-  cursor: pointer;
 }
-.portfolio-bg .portfolio-box .portfolio-card .portfolioImg01 {
+.portfolio-box .portfolio-card .portfolioImg {
+  height: 100%;
+  width: 100%;
+}
+.portfolio-box .portfolio-card .portfolioImg .portfolioImg01 {
   background-image: url(../img/portfolio01.png);
   background-size: cover;
   background-position: center;
   height: 100%;
   width: 100%;
+  transition: 0.5s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
-.portfolio-bg .portfolio-box .portfolio-card .portfolioImg02 {
+.portfolio-box .portfolio-card .portfolioImg .portfolioImg01 .imgfilter01 {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+}
+.portfolio-box .portfolio-card .portfolioImg .portfolioImg01:hover {
+  transform: scale(1.3);
+}
+.portfolio-box .portfolio-card .portfolioImg .portfolioImg01:hover .imgfilter01 {
+  background: linear-gradient(transparent, rgb(58, 226, 229));
+  top: 0;
+}
+.portfolio-box .portfolio-card .portfolioImg .portfolioImg02 {
   background-image: url(../img/portfolio02.png);
   background-size: cover;
   background-position: center;
   height: 100%;
   width: 100%;
+  transition: 0.5s;
+  cursor: pointer;
+  overflow: hidden;
 }
-.portfolio-bg .portfolio-box .portfolio-card .portfolioImg03 {
+.portfolio-box .portfolio-card .portfolioImg .portfolioImg02 .imgfilter02 {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+}
+.portfolio-box .portfolio-card .portfolioImg .portfolioImg02:hover {
+  transform: scale(1.3);
+}
+.portfolio-box .portfolio-card .portfolioImg .portfolioImg02:hover .imgfilter02 {
+  background: linear-gradient(transparent, rgb(217, 101, 211));
+  top: 0;
+}
+.portfolio-box .portfolio-card .portfolioImg .portfolioImg03 {
   background-image: url(../img/portfolio03.png);
   background-size: cover;
   background-position: center;
   height: 100%;
   width: 100%;
+  transition: 0.5s;
+  cursor: pointer;
+  overflow: hidden;
 }
-.portfolio-bg .portfolio-box .card-1 {
+.portfolio-box .portfolio-card .portfolioImg .portfolioImg03 .imgfilter03 {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+}
+.portfolio-box .portfolio-card .portfolioImg .portfolioImg03:hover {
+  transform: scale(1.3);
+}
+.portfolio-box .portfolio-card .portfolioImg .portfolioImg03:hover .imgfilter03 {
+  background: linear-gradient(transparent, rgb(229, 169, 58));
+  top: 0;
+}
+.portfolio-box .card-1 {
   border: 3px solid rgb(58, 226, 229);
   box-shadow: 0 0 3rem rgb(58, 226, 229);
   position: relative;
 }
-.portfolio-bg .portfolio-box .card-1::before {
+.portfolio-box .card-1::before {
   content: "";
   position: absolute;
   background-color: rgb(58, 226, 229);
@@ -1267,12 +1360,12 @@
   transform: perspective(5em) rotateX(40deg) scale(1, 0.3);
   filter: blur(3em);
 }
-.portfolio-bg .portfolio-box .card-2 {
+.portfolio-box .card-2 {
   border: 3px solid rgb(217, 101, 211);
   box-shadow: 0 0 3rem rgb(217, 101, 211);
   position: relative;
 }
-.portfolio-bg .portfolio-box .card-2::before {
+.portfolio-box .card-2::before {
   content: "";
   position: absolute;
   background-color: rgb(217, 101, 211);
@@ -1283,12 +1376,12 @@
   transform: perspective(5em) rotateX(40deg) scale(1, 0.3);
   filter: blur(3em);
 }
-.portfolio-bg .portfolio-box .card-3 {
+.portfolio-box .card-3 {
   border: 3px solid rgb(229, 169, 58);
   box-shadow: 0 0 3rem rgb(229, 169, 58);
   position: relative;
 }
-.portfolio-bg .portfolio-box .card-3::before {
+.portfolio-box .card-3::before {
   content: "";
   position: absolute;
   background-color: rgb(229, 169, 58);
