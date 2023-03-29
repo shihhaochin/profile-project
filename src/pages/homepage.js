@@ -44,7 +44,12 @@ const homepage = () => {
             <span></span>
             <span></span>
             <span></span>
-            <Link to="/contact">Contact Me</Link>
+            <Link
+              to="/contact"
+              style={{ textDecoration: "none", color: "rgb(85,43,203)" }}
+            >
+              Contact Me
+            </Link>
           </button>
 
           <div className="blob">
