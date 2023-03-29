@@ -35,17 +35,17 @@ const contactmepage = () => {
         <h1>如果有任何疑問</h1>
         <p>歡迎隨時與我聯絡</p>
         <div className="contact-card-box">
-          <div className="contact-card">
+          <div className="contact-card card-1">
             <img src={phoneImg} alt="phoneImg" />
             <h3>聯絡電話</h3>
             <p>0916952516</p>
           </div>
-          <div className="contact-card">
+          <div className="contact-card card-2">
             <img src={emailImg} alt="email-img" />
             <h3>電子郵件</h3>
             <p>shihhao108@gmail.com</p>
           </div>
-          <div className="contact-card">
+          <div className="contact-card card-3">
             <img src={githubImg} alt="github-img" />
             <h3>Github</h3>
             <p>https://github.com/shihhaochin</p>
@@ -78,10 +78,22 @@ const contactmepage = () => {
                 required
               />
               <textarea name="message" placeholder="Message!"></textarea>
-              <button type="submit">Send Message</button>
+              <button type="submit">
+                Send Message <span></span>
+              </button>
             </form>
           </div>
         </section>
+      </div>
+
+      <div className="meteor-box">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
     </div>
   );
