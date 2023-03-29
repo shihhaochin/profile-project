@@ -59,10 +59,16 @@
         background-color: transparent;
         position: relative;
         margin-top: 1rem;
-        color: #4598e0;
         border: none;
         transition: 0.2s;
         overflow: hidden;
+        a,
+        a:link,
+        a:visited {
+          color: #4598e0;
+          text-decoration: none;
+        }
+
         span {
           position: absolute;
           display: block;
@@ -96,6 +102,7 @@
           background: linear-gradient(360deg, transparent, #4598e0);
         }
       }
+
       button:hover {
         color: rgb(33, 18, 75);
         background-color: #4598e0;
@@ -120,6 +127,10 @@
         bottom: 100%;
         transition: 1s;
         transition-delay: 0.75s;
+      }
+      button:hover a {
+        color: rgb(33, 18, 75);
+        text-decoration: none;
       }
 
       .blob {

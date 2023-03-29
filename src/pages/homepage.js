@@ -5,6 +5,7 @@ import facebookImg from "../img/facebookImg.png";
 import instagramImg from "../img/instagramImg.png";
 import googleImg from "../img/googleImg.png";
 import twitterImg from "../img/twitterImg.png";
+import { Link } from "react-router-dom";
 
 const homepage = () => {
   return (
@@ -43,7 +44,7 @@ const homepage = () => {
             <span></span>
             <span></span>
             <span></span>
-            Contact Me
+            <Link to="/contact">Contact Me</Link>
           </button>
 
           <div className="blob">
