@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import avatarImg from "../img/aboutUs.png";
 import homeImg from "../img/home.png";
 import userImg from "../img/user.png";
 import skillImg from "../img/skills.png";
 import documentImg from "../img/document.png";
 import smartphoneImg from "../img/smartphone-call.png";
-
 import { Link } from "react-router-dom";
+import Clock from "react-live-clock";
+import Calender from "react-calendar";
+import "react-calendar/dist/Calendar.css";
 
-const naviComponent = () => {
+function naviComponent() {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [calendarValue, setCalendarValue] = useState(new Date());
   return (
     <div className="navibar">
       <div className="navibar-left">
@@ -73,16 +77,19 @@ const naviComponent = () => {
 
       <div className="navibar-right">
         <ul>
-          <li>天氣api</li>
-          <li>棒球api</li>
-          <li>足球api</li>
-          <li>計算機</li>
-          <li>月曆</li>
-          <li>等等</li>
+          <li>
+            <Clock format={"HH:mm:ss"} ticking={true} timezone={"TW/Pacific"} />
+          </li>
+          <li>
+            <Calender conChange={setCalendarValue} value={calendarValue} />
+          </li>
+          <li>NBA</li>
+          <li>MLB</li>
+          <li>英超</li>
         </ul>
       </div>
     </div>
   );
-};
+}
 
 export default naviComponent;

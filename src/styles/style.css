@@ -118,13 +118,9 @@
   transform: skewX(45deg);
 }
 .navibar .navibar-right {
-  width: 15rem;
-  height: 100vh;
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 25rem;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   right: 0;
 }
@@ -132,12 +128,19 @@
   color: white;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
   list-style: none;
   font-size: 2rem;
+  height: 100%;
+  margin-top: 2rem;
 }
-.navibar .navibar-right ul li {
-  cursor: pointer;
+.navibar .navibar-right ul li .react-calendar__month-view__weekdays {
+  color: black;
+}
+.navibar .navibar-right ul li .react-calendar__month-view__weekdays .react-calendar__month-view__weekdays__weekday--weekend {
+  color: red;
 }
 
 .homepage-bg {
@@ -203,10 +206,15 @@
   background-color: transparent;
   position: relative;
   margin-top: 1rem;
-  color: #4598e0;
   border: none;
   transition: 0.2s;
   overflow: hidden;
+}
+.homepage-bg .homepage .homepage-left button a,
+.homepage-bg .homepage .homepage-left button a:link,
+.homepage-bg .homepage .homepage-left button a:visited {
+  color: #4598e0;
+  text-decoration: none;
 }
 .homepage-bg .homepage .homepage-left button span {
   position: absolute;
