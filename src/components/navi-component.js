@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import avatarImg from "../img/aboutUs.png";
 import homeImg from "../img/home.png";
 import userImg from "../img/user.png";
@@ -8,11 +8,27 @@ import smartphoneImg from "../img/smartphone-call.png";
 import { Link } from "react-router-dom";
 import Clock from "react-live-clock";
 import Calender from "react-calendar";
+import NbaScore from "./nbaScore";
 import "react-calendar/dist/Calendar.css";
 
 function naviComponent() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [calendarValue, setCalendarValue] = useState(new Date());
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [nbaData, setNbaData] = useState("");
+
+  const searchNbaData = async () => {
+    const dataFetch = await fetch("http://localhost:8000/api/user/nbaApi");
+
+    let parseData = await dataFetch.json();
+    setNbaData(parseData);
+  };
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    searchNbaData();
+  });
+
   return (
     <div className="navibar">
       <div className="navibar-left">
@@ -77,13 +93,15 @@ function naviComponent() {
 
       <div className="navibar-right">
         <ul>
-          <li>
+          {/* <li>
             <Clock format={"HH:mm:ss"} ticking={true} timezone={"TW/Pacific"} />
           </li>
           <li>
             <Calender conChange={setCalendarValue} value={calendarValue} />
+          </li> */}
+          <li>
+            <NbaScore nbaData={nbaData} />
           </li>
-          <li>NBA</li>
           <li>MLB</li>
           <li>英超</li>
         </ul>
