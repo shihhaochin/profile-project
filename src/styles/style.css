@@ -118,7 +118,7 @@
   transform: skewX(45deg);
 }
 .navibar .navibar-right {
-  width: 25rem;
+  width: 20rem;
   min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
@@ -142,7 +142,162 @@
 .navibar .navibar-right ul li .react-calendar__month-view__weekdays .react-calendar__month-view__weekdays__weekday--weekend {
   color: red;
 }
+.navibar .navibar-right ul .loaddingImg img {
+  height: 100px;
+  animation: loaddingAnimation 3s linear infinite;
+}
+.navibar .navibar-right ul .nbaScoreboard {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navibar .navibar-right ul .nbaScoreboard h1 {
+  margin-top: 2rem;
+}
+.navibar .navibar-right ul .nbaScoreboard .nbaScore-box {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  overflow: scroll;
+  position: relative;
+}
+.navibar .navibar-right ul .nbaScoreboard .nbaScore-box div {
+  height: 100px;
+  width: 600px;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.navibar .navibar-right ul .nbaScoreboard .nbaScore-box .nba-close {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 0;
+  right: 10%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.navibar .navibar-right ul .nbaScoreboard .nbaScore-box .nba-close span {
+  position: relative;
+  width: 40px;
+  height: 5px;
+  background-color: rgb(73, 49, 161);
+  transform: rotateZ(45deg);
+}
+.navibar .navibar-right ul .nbaScoreboard .nbaScore-box .nba-close span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 5px;
+  background-color: rgb(73, 49, 161);
+  transform: rotateZ(90deg);
+}
+.navibar .navibar-right ul .nbaScoreboard .nbaScore-box .nba-close:hover {
+  background-color: #fff;
+}
+.navibar .navibar-right ul .mlbScoreboard {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navibar .navibar-right ul .mlbScoreboard h1 {
+  margin-top: 2rem;
+}
+.navibar .navibar-right ul .mlbScoreboard .mlbScore-box {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  overflow: scroll;
+  position: relative;
+}
+.navibar .navibar-right ul .mlbScoreboard .mlbScore-box div {
+  height: 100px;
+  width: 600px;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.navibar .navibar-right ul .mlbScoreboard .mlbScore-box .mlb-close {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 0;
+  right: 10%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.navibar .navibar-right ul .mlbScoreboard .mlbScore-box .mlb-close span {
+  position: relative;
+  width: 40px;
+  height: 5px;
+  background-color: rgb(73, 49, 161);
+  transform: rotateZ(45deg);
+}
+.navibar .navibar-right ul .mlbScoreboard .mlbScore-box .mlb-close span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 5px;
+  background-color: rgb(73, 49, 161);
+  transform: rotateZ(90deg);
+}
+.navibar .navibar-right ul .mlbScoreboard .mlbScore-box .mlb-close:hover {
+  background-color: #fff;
+}
 
+@keyframes loaddingAnimation {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(90deg);
+  }
+  50% {
+    transform: rotateZ(180deg);
+  }
+  75% {
+    transform: rotateZ(270deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
 .homepage-bg {
   width: 100%;
   min-height: 100vh;

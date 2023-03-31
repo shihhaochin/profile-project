@@ -5,10 +5,12 @@ import userImg from "../img/user.png";
 import skillImg from "../img/skills.png";
 import documentImg from "../img/document.png";
 import smartphoneImg from "../img/smartphone-call.png";
+import loaddingImg from "../img/loading.png";
 import { Link } from "react-router-dom";
 import Clock from "react-live-clock";
 import Calender from "react-calendar";
 import NbaScore from "./nbaScore";
+import MlbScore from "./mlbScore";
 import "react-calendar/dist/Calendar.css";
 
 function naviComponent() {
@@ -16,18 +18,32 @@ function naviComponent() {
   const [calendarValue, setCalendarValue] = useState(new Date());
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [nbaData, setNbaData] = useState("");
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [mlbData, setMlbData] = useState("");
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [mlbLoadding, setMlbLoadding] = useState(false);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [nbaLoadding, setNbaLoadding] = useState(false);
 
   const searchNbaData = async () => {
+    setNbaLoadding(true);
     const dataFetch = await fetch("http://localhost:8000/api/user/nbaApi");
 
     let parseData = await dataFetch.json();
     setNbaData(parseData);
+    if (parseData) {
+      setNbaLoadding(false);
+    }
   };
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  useEffect(() => {
-    searchNbaData();
-  });
+  const searchMlbData = async () => {
+    setMlbLoadding(true);
+    const dataFetch = await fetch("http://localhost:8000/api/user/mlbApi");
+    let parseData = await dataFetch.json();
+    setMlbData(parseData);
+    if (parseData) {
+      setMlbLoadding(false);
+    }
+  };
 
   return (
     <div className="navibar">
@@ -99,11 +115,35 @@ function naviComponent() {
           <li>
             <Calender conChange={setCalendarValue} value={calendarValue} />
           </li> */}
-          <li>
-            <NbaScore nbaData={nbaData} />
+          <li style={{ cursor: "pointer" }} onClick={searchNbaData}>
+            NBA當日賽事
           </li>
-          <li>MLB</li>
-          <li>英超</li>
+          {nbaLoadding === true && (
+            <li className="loaddingImg">
+              <img src={loaddingImg} alt="loadding-img" />
+            </li>
+          )}
+          {nbaData && (
+            <li className="nbaScoreboard">
+              <h1>今日NBA比賽</h1>
+              <NbaScore nbaData={nbaData} setNbaData={setNbaData} />
+            </li>
+          )}
+          <li style={{ cursor: "pointer" }} onClick={searchMlbData}>
+            MLB當日賽事
+          </li>
+          {mlbLoadding === true && (
+            <li className="loaddingImg">
+              <img src={loaddingImg} alt="loadding-img" />
+            </li>
+          )}
+
+          {mlbData && (
+            <li className="mlbScoreboard">
+              <h1>今日MLB比賽</h1>
+              <MlbScore mlbData={mlbData} setMlbData={setMlbData} />
+            </li>
+          )}
         </ul>
       </div>
     </div>

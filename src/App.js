@@ -10,7 +10,7 @@ import "./styles/style.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ position: "relative" }}>
       <NaviComponent />
 
       <Routes>
