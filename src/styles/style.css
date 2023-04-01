@@ -146,6 +146,31 @@
 .navibar .navibar-right ul li .time {
   font-size: 3rem;
 }
+.navibar .navibar-right ul li .todobg .todoForm input {
+  width: 15rem;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: none;
+  outline: none;
+  color: rgb(243, 6, 243);
+  padding: 0.5rem;
+}
+.navibar .navibar-right ul li .todobg .todoForm button {
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgb(243, 6, 243);
+  border: none;
+  padding: 0.2rem;
+  margin-left: 10px;
+  padding: 0.1rem 1rem;
+  border: 2px solid rgb(243, 6, 243);
+  transition: 0.3s;
+}
+.navibar .navibar-right ul li .todobg .todoForm button:hover {
+  background-color: rgb(243, 6, 243);
+  color: #230445;
+}
 .navibar .navibar-right ul li .react-calendar__month-view__weekdays {
   color: black;
 }

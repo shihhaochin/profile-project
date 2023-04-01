@@ -12,6 +12,7 @@ import Calender from "react-calendar";
 import WeatherData from "./weatherData";
 import NbaScore from "./nbaScore";
 import MlbScore from "./mlbScore";
+import Todolist from "./todolist";
 
 import "react-calendar/dist/Calendar.css";
 
@@ -162,6 +163,9 @@ function naviComponent() {
               <MlbScore mlbData={mlbData} setMlbData={setMlbData} />
             </li>
           )}
+          <li>
+            <Todolist />
+          </li>
         </ul>
       </div>
     </div>

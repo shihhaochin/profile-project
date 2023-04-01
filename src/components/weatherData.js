@@ -35,7 +35,7 @@ const weatherData = () => {
         style={{ cursor: "pointer" }}
         onClick={searchWeather}
       >
-        Today Weather
+        現在天氣
       </p>
       {weatherData && (
         <div className="weatherData">
