@@ -9,8 +9,10 @@ import loaddingImg from "../img/loading.png";
 import { Link } from "react-router-dom";
 import Clock from "react-live-clock";
 import Calender from "react-calendar";
+import WeatherData from "./weatherData";
 import NbaScore from "./nbaScore";
 import MlbScore from "./mlbScore";
+
 import "react-calendar/dist/Calendar.css";
 
 function naviComponent() {
@@ -109,14 +111,26 @@ function naviComponent() {
 
       <div className="navibar-right">
         <ul>
-          {/* <li>
-            <Clock format={"HH:mm:ss"} ticking={true} timezone={"TW/Pacific"} />
+          <li>
+            <WeatherData />
+          </li>
+          <li>
+            <Clock
+              className="time"
+              format={"HH:mm:ss"}
+              ticking={true}
+              timezone={"TW/Pacific"}
+            />
           </li>
           <li>
             <Calender conChange={setCalendarValue} value={calendarValue} />
-          </li> */}
-          <li style={{ cursor: "pointer" }} onClick={searchNbaData}>
-            NBA當日賽事
+          </li>
+          <li
+            className="nba-title"
+            style={{ cursor: "pointer" }}
+            onClick={searchNbaData}
+          >
+            <p>NBA當日比分</p>
           </li>
           {nbaLoadding === true && (
             <li className="loaddingImg">
@@ -129,8 +143,12 @@ function naviComponent() {
               <NbaScore nbaData={nbaData} setNbaData={setNbaData} />
             </li>
           )}
-          <li style={{ cursor: "pointer" }} onClick={searchMlbData}>
-            MLB當日賽事
+          <li
+            className="mlb-title"
+            style={{ cursor: "pointer" }}
+            onClick={searchMlbData}
+          >
+            <p>MLB當日比分</p>
           </li>
           {mlbLoadding === true && (
             <li className="loaddingImg">
