@@ -1,30 +1,73 @@
 import React, { useState } from "react";
+import { TodoForm } from "./TodoForm";
+import { v4 as uuidv4 } from "uuid";
+import { Todo } from "./Todo";
+import { EditTodoForm } from "./EditTodoForm";
+uuidv4();
 
 const todolist = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [todos, setTodos] = useState([]);
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [input, setInput] = useState("");
 
-  const handleTodoChange = (e) => {
-    e.preventDefault();
-    setInput(e.target.value);
+  const addTodo = (todo) => {
+    setTodos([
+      ...todos,
+      { id: uuidv4(), task: todo, completed: false, isEditing: false },
+    ]);
+
+    console.log(todos);
   };
 
-  const submitTodo = () => {
-    setTodos(input);
-    setInput("");
+  const toggleComplete = (id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id
+          ? {
+              ...todo,
+              completed: !todo.completed,
+            }
+          : todo
+      )
+    );
+  };
+
+  const deleteTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
+
+  const editTodo = (id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, isEditing: !todo.isEditing } : todo
+      )
+    );
+  };
+
+  const editTask = (task, id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, task, isEditing: !todo.isEditing } : todo
+      )
+    );
   };
 
   return (
-    <div className="todobg">
-      <form className="todoForm">
-        <input type="text" onChange={handleTodoChange} placeholder="今日任務" />
-        <button type="button" onClick={submitTodo}>
-          紀錄
-        </button>
-      </form>
-      {todos && <p>{todos}</p>}
+    <div className="Todolist">
+      <h1>Get Things Done!</h1>
+      <TodoForm addTodo={addTodo} />
+      {todos.map((todo, index) =>
+        todo.isEditing ? (
+          <EditTodoForm editTodo={editTask} task={todo} />
+        ) : (
+          <Todo
+            task={todo}
+            key={index}
+            toggleComplete={toggleComplete}
+            deleteTodo={deleteTodo}
+            editTodo={editTodo}
+          />
+        )
+      )}
     </div>
   );
 };
