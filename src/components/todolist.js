@@ -53,7 +53,7 @@ const todolist = () => {
 
   return (
     <div className="Todolist">
-      <h1>Get Things Done!</h1>
+      <h1>待辦事項</h1>
       <TodoForm addTodo={addTodo} />
       {todos.map((todo, index) =>
         todo.isEditing ? (

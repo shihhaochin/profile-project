@@ -15,11 +15,11 @@ export const TodoForm = ({ addTodo }) => {
         type="text"
         className="todo-input"
         value={value}
-        placeholder="what is the task today?"
+        placeholder="今日任務"
         onChange={(e) => setValue(e.target.value)}
       />
       <button type="submit" className="todo-btn">
-        Add Task
+        增加任務
       </button>
     </form>
   );

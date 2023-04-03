@@ -129,47 +129,66 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: start;
   list-style: none;
   font-size: 2rem;
-  height: 100%;
-  margin-top: 2rem;
+  height: 100vh;
   width: 100%;
   text-align: center;
+  margin-top: 1rem;
 }
 .navibar .navibar-right ul li {
   border-bottom: 2px solid white;
   width: 100%;
-  padding-bottom: 2rem;
 }
 .navibar .navibar-right ul li .time {
   font-size: 3rem;
 }
-.navibar .navibar-right ul li .todobg .todoForm input {
-  width: 15rem;
+.navibar .navibar-right ul li .Todolist h1 {
   font-size: 2rem;
-  background-color: rgba(0, 0, 0, 0.8);
-  border: none;
-  outline: none;
-  color: rgb(243, 6, 243);
-  padding: 0.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
 }
-.navibar .navibar-right ul li .todobg .todoForm button {
+.navibar .navibar-right ul li .Todolist .TodoForm {
+  width: 100%;
+  border-bottom: 2px solid #fff;
+}
+.navibar .navibar-right ul li .Todolist .TodoForm input {
+  font-size: 2rem;
+  padding: 2px 10px;
+  color: rgb(241, 9, 241);
+  border: 2px solid rgb(241, 9, 241);
+  background-color: transparent;
+  margin-bottom: 1rem;
+  outline: none;
+  width: 100%;
+}
+.navibar .navibar-right ul li .Todolist .TodoForm button {
   font-size: 1.5rem;
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: rgb(243, 6, 243);
   border: none;
-  padding: 0.2rem;
-  margin-left: 10px;
-  padding: 0.1rem 1rem;
-  border: 2px solid rgb(243, 6, 243);
-  transition: 0.3s;
+  outline: none;
+  color: rgb(241, 9, 241);
+  background-color: transparent;
+  padding: 0 1rem;
+  border-radius: 10px;
+  border: 2px solid rgb(241, 9, 241);
+  transition: 0.1s;
+  margin-bottom: 1rem;
 }
-.navibar .navibar-right ul li .todobg .todoForm button:hover {
-  background-color: rgb(243, 6, 243);
-  color: #230445;
+.navibar .navibar-right ul li .Todolist .TodoForm button:hover {
+  background-color: rgb(241, 9, 241);
+  color: rgb(28, 2, 28);
+}
+.navibar .navibar-right ul li .Todolist .Todo {
+  display: flex;
+  justify-content: space-between;
+}
+.navibar .navibar-right ul li .Todolist .Todo p {
+  margin-left: 5px;
+}
+.navibar .navibar-right ul li .Todolist .Todo div {
+  cursor: pointer;
 }
 .navibar .navibar-right ul li .react-calendar__month-view__weekdays {
   color: black;
@@ -187,6 +206,42 @@
 .navibar .navibar-right ul li .weatherbg .weatherData h1 {
   margin-top: 1rem;
   text-align: center;
+  position: relative;
+}
+.navibar .navibar-right ul li .weatherbg .weatherData h1 .weatherClose {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.navibar .navibar-right ul li .weatherbg .weatherData h1 .weatherClose:hover {
+  background-color: #fff;
+}
+.navibar .navibar-right ul li .weatherbg .weatherData h1 .weatherClose::before {
+  width: 90%;
+  height: 5px;
+  content: "";
+  position: absolute;
+  top: 22px;
+  right: 2px;
+  transform: rotateZ(45deg);
+  background-color: rgb(6, 92, 92);
+}
+.navibar .navibar-right ul li .weatherbg .weatherData h1 .weatherClose::after {
+  content: "";
+  width: 90%;
+  height: 5px;
+  position: absolute;
+  top: 22px;
+  right: 2px;
+  transform: rotateZ(135deg);
+  background-color: rgb(6, 92, 92);
 }
 .navibar .navibar-right ul li .weatherbg .weatherData p {
   margin: 1rem 0;
