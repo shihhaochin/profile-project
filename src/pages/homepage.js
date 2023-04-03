@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import TypeWriterEffect from "react-typewriter-effect";
 import { SvgBlob } from "react-svg-blob";
 import facebookImg from "../img/facebookImg.png";
@@ -7,7 +7,22 @@ import googleImg from "../img/googleImg.png";
 import twitterImg from "../img/twitterImg.png";
 import { Link } from "react-router-dom";
 
-const homepage = () => {
+const homepage = ({
+  setIsHomepage,
+  setIsAboutpage,
+  setIsSkillpage,
+  setIsPortfoliopage,
+  setIsContactpage,
+}) => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    setIsHomepage(true);
+    setIsAboutpage(false);
+    setIsSkillpage(false);
+    setIsPortfoliopage(false);
+    setIsContactpage(false);
+  });
+
   return (
     <div className="homepage-bg">
       <div className="homepage">

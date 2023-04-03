@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import highschoolImg from "../img/highschool.png";
 import dayehImg from "../img/Dayeh.png";
 import soldierImg from "../img/soldier.png";
@@ -6,7 +6,22 @@ import hotelImg from "../img/hotel.png";
 import japanImg from "../img/japan.png";
 import contaiImg from "../img/contai.png";
 
-const aboutpage = () => {
+const aboutpage = ({
+  setIsHomepage,
+  setIsAboutpage,
+  setIsSkillpage,
+  setIsPortfoliopage,
+  setIsContactpage,
+}) => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    setIsHomepage(false);
+    setIsAboutpage(true);
+    setIsSkillpage(false);
+    setIsPortfoliopage(false);
+    setIsContactpage(false);
+  });
+
   return (
     <div className="aboutmepage">
       <div className="aboutme-box">

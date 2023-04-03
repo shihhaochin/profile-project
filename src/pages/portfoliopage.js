@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import linkImg from "../img/link.png";
 import { Link } from "react-router-dom";
 
-const portfoliopage = () => {
+const portfoliopage = ({
+  setIsHomepage,
+  setIsAboutpage,
+  setIsSkillpage,
+  setIsPortfoliopage,
+  setIsContactpage,
+}) => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    setIsHomepage(false);
+    setIsAboutpage(false);
+    setIsSkillpage(false);
+    setIsPortfoliopage(true);
+    setIsContactpage(false);
+  });
   return (
     <div className="portfolio-bg">
       <div className="portfolio-title">

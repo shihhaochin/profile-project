@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import htmlImg from "../img/html.png";
 import cssImg from "../img/css.png";
 import jsImg from "../img/jsImg.png";
@@ -19,7 +19,22 @@ function Number({ n }) {
   return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
 }
 
-const skillpage = () => {
+const skillpage = ({
+  setIsHomepage,
+  setIsAboutpage,
+  setIsSkillpage,
+  setIsPortfoliopage,
+  setIsContactpage,
+}) => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    setIsHomepage(false);
+    setIsAboutpage(false);
+    setIsSkillpage(true);
+    setIsPortfoliopage(false);
+    setIsContactpage(false);
+  });
+
   return (
     <div className="skill-bg">
       <h1>~What i know~</h1>

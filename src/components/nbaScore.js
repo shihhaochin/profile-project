@@ -18,6 +18,7 @@ const nbaScore = ({ nbaData, setNbaData }) => {
           </p>
         </div>
       ))}
+      {nbaData.scoreboard.games.length === 0 && <p>今天休賽</p>}
       <div
         className="nba-close"
         onClick={() => {

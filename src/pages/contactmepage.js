@@ -1,10 +1,25 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import phoneImg from "../img/phone-call.png";
 import emailImg from "../img/email.png";
 import githubImg from "../img/github.png";
 
-const contactmepage = () => {
+const contactmepage = ({
+  setIsHomepage,
+  setIsAboutpage,
+  setIsSkillpage,
+  setIsPortfoliopage,
+  setIsContactpage,
+}) => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    setIsHomepage(false);
+    setIsAboutpage(false);
+    setIsSkillpage(false);
+    setIsPortfoliopage(false);
+    setIsContactpage(true);
+  });
+
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const form = useRef();
 

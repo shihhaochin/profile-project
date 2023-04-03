@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import avatarImg from "../img/aboutUs.png";
 import homeImg from "../img/home.png";
 import userImg from "../img/user.png";
@@ -16,7 +16,13 @@ import Todolist from "./todolist";
 
 import "react-calendar/dist/Calendar.css";
 
-function naviComponent() {
+function naviComponent({
+  isHomepage,
+  isAboutpage,
+  isSkillpage,
+  isPortfoliopage,
+  isContactpage,
+}) {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [calendarValue, setCalendarValue] = useState(new Date());
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -71,7 +77,7 @@ function naviComponent() {
                 <span>
                   <img src={homeImg} alt="home-Img" />
                 </span>
-                Home
+                <p className={isHomepage ? "navibar-menu-purple" : ""}> Home</p>
               </Link>
             </li>
             <li style={{ zIndex: "5" }}>
@@ -79,7 +85,9 @@ function naviComponent() {
                 <span>
                   <img src={userImg} alt="user-img" />
                 </span>
-                About Me
+                <p className={isAboutpage ? "navibar-menu-green" : ""}>
+                  About Me
+                </p>
               </Link>
             </li>
             <li style={{ zIndex: "4" }}>
@@ -87,7 +95,9 @@ function naviComponent() {
                 <span>
                   <img src={skillImg} alt="skill-img" />
                 </span>
-                Skill
+                <p className={isSkillpage ? "navibar-menu-yellow" : ""}>
+                  Skill
+                </p>
               </Link>
             </li>
             <li style={{ zIndex: "3" }}>
@@ -95,7 +105,9 @@ function naviComponent() {
                 <span>
                   <img src={documentImg} alt="document-img" />
                 </span>
-                Portfolio
+                <p className={isPortfoliopage ? "navibar-menu-pink" : ""}>
+                  Portfolio
+                </p>
               </Link>
             </li>
             <li style={{ zIndex: "2" }}>
@@ -103,7 +115,9 @@ function naviComponent() {
                 <span>
                   <img src={smartphoneImg} alt="smartphone-img" />
                 </span>
-                Contact Me
+                <p className={isContactpage ? "navibar-menu-blue" : ""}>
+                  Contact Me
+                </p>
               </Link>
             </li>
           </ul>
