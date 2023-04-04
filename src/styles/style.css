@@ -10,7 +10,7 @@
   z-index: 90;
 }
 .navibar .navibar-left {
-  min-height: 100vh;
+  height: 100vh;
   width: 21rem;
   display: flex;
   flex-direction: column;
@@ -18,7 +18,9 @@
   align-items: center;
   position: absolute;
   gap: 5rem;
-  margin-top: 5rem;
+  padding-top: 2rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: 0.3s;
 }
 .navibar .navibar-left .avatarImg {
   height: 10rem;
@@ -132,12 +134,36 @@
   transform-origin: bottom;
   transform: skewX(45deg);
 }
+.navibar .navibar-left .leftNavibar-btn {
+  position: absolute;
+  top: 2rem;
+  right: -4rem;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.navibar .navibar-left .leftNavibar-btn img {
+  height: 100%;
+  width: 100%;
+  transform: rotateY(180deg);
+}
+.navibar .navibar-left .leftNavibar-btn:hover {
+  background-color: #fff;
+}
+.navibar .navibar-leftChange {
+  transform: translateX(-21rem);
+  transition: 0.3s;
+}
 .navibar .navibar-right {
   width: 22rem;
   min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
   position: absolute;
   right: 0;
+  transition: 0.3s;
 }
 .navibar .navibar-right ul {
   color: white;
@@ -275,6 +301,25 @@
 .navibar .navibar-right ul li .weatherbg .weatherData p {
   margin: 1rem 0;
   font-weight: 300;
+}
+.navibar .navibar-right ul .rightNavibar-btn {
+  position: absolute;
+  top: 2rem;
+  left: -4rem;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+.navibar .navibar-right ul .rightNavibar-btn img {
+  height: 100%;
+  width: 100%;
+}
+.navibar .navibar-right ul .rightNavibar-btn:hover {
+  background-color: #fff;
 }
 .navibar .navibar-right ul .nba-title p {
   transition: 0.5s;
@@ -427,6 +472,10 @@
 }
 .navibar .navibar-right ul .mlbScoreboard .mlbScore-box .mlb-close:hover {
   background-color: #fff;
+}
+.navibar .navibar-rightChange {
+  transition: 0.3s;
+  right: -22rem;
 }
 
 @keyframes loaddingAnimation {

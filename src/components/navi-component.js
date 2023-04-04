@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import avatarImg from "../img/aboutUs.png";
 import homeImg from "../img/home.png";
 import userImg from "../img/user.png";
@@ -6,6 +6,8 @@ import skillImg from "../img/skills.png";
 import documentImg from "../img/document.png";
 import smartphoneImg from "../img/smartphone-call.png";
 import loaddingImg from "../img/loading.png";
+import leftArrow from "../img/leftArrow.png";
+
 import { Link } from "react-router-dom";
 import Clock from "react-live-clock";
 import Calender from "react-calendar";
@@ -33,6 +35,10 @@ function naviComponent({
   const [mlbLoadding, setMlbLoadding] = useState(false);
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [nbaLoadding, setNbaLoadding] = useState(false);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [rightNavibar, setRightNavibar] = useState(false);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [leftNavibar, setLeftNavibar] = useState(false);
 
   const searchNbaData = async () => {
     setNbaLoadding(true);
@@ -53,10 +59,29 @@ function naviComponent({
       setMlbLoadding(false);
     }
   };
+  const handlerwd = () => {
+    if (window.innerWidth < 1300) {
+      setRightNavibar(true);
+      setLeftNavibar(true);
+    } else {
+      setRightNavibar(false);
+      setLeftNavibar(false);
+    }
+  };
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    window.addEventListener("resize", handlerwd);
+    return () => {
+      window.removeEventListener("resize", handlerwd);
+    };
+  });
 
   return (
     <div className="navibar">
-      <div className="navibar-left">
+      <div
+        className={`navibar-left ${leftNavibar ? "navibar-leftChange" : ""}`}
+      >
         <div className="avatarImg">
           <img src={avatarImg} alt="avatarImg" />
         </div>
@@ -122,9 +147,24 @@ function naviComponent({
             </li>
           </ul>
         </div>
+
+        <div
+          className="leftNavibar-btn"
+          onClick={() => {
+            if (leftNavibar) {
+              setLeftNavibar(false);
+            } else {
+              setLeftNavibar(true);
+            }
+          }}
+        >
+          <img src={leftArrow} alt="arrow-img" />
+        </div>
       </div>
 
-      <div className="navibar-right">
+      <div
+        className={`navibar-right ${rightNavibar ? "navibar-rightChange" : ""}`}
+      >
         <ul>
           <li>
             <WeatherData />
@@ -179,6 +219,19 @@ function naviComponent({
           )}
           <li>
             <Todolist />
+          </li>
+
+          <li
+            className="rightNavibar-btn"
+            onClick={() => {
+              if (rightNavibar) {
+                setRightNavibar(false);
+              } else {
+                setRightNavibar(true);
+              }
+            }}
+          >
+            <img src={leftArrow} alt="arrow-img" />
           </li>
         </ul>
       </div>
