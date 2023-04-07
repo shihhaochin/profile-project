@@ -1,36 +1,63 @@
 .navibar {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 90;
 
   .navibar-left {
-    height: 100vh;
+    height: 150vh;
     width: 21rem;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
     position: absolute;
-    gap: 5rem;
+    gap: 4rem;
     padding-top: 2rem;
     background-color: rgba(0, 0, 0, 0.9);
     transition: 0.3s;
-    .avatarImg {
-      height: 10rem;
-      width: 10rem;
-      border-radius: 5rem;
-      overflow: hidden;
 
-      img {
-        height: 12rem;
+    .avatarImg-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      .avatarImg {
+        height: 150px;
+        width: 150px;
+        border-radius: 5rem;
+        overflow: hidden;
+        img {
+          height: 160px;
+          width: 160px;
+        }
+      }
+
+      .avatar-textClose-btn {
+        background-color: rgba(255, 255, 255, 0.5);
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+
+        cursor: pointer;
+        transition: 0.3s;
+        img {
+          height: 100%;
+          width: 100%;
+          transform: rotateZ(-90deg);
+        }
+      }
+      .avatar-textClose-btn:hover {
+        background-color: #fff;
       }
     }
 
     .avatar-text {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+
       align-items: center;
+
       h2 {
         font-size: 2rem;
         color: rgb(217, 159, 15);
@@ -48,7 +75,9 @@
         }
       }
     }
-
+    .avatar-textClose {
+      display: none;
+    }
     .navibar-menu {
       ul {
         color: white;
@@ -86,7 +115,6 @@
               display: flex;
               justify-content: center;
               align-items: center;
-
               img {
                 height: 2rem;
               }
@@ -164,9 +192,10 @@
   }
   .navibar-right {
     width: 22rem;
-    min-height: 100vh;
+    height: 150vh;
     background-color: rgba(0, 0, 0, 0.9);
     position: absolute;
+    top: 0;
     right: 0;
     transition: 0.3s;
 
@@ -182,6 +211,7 @@
       height: 100vh;
       width: 100%;
       text-align: center;
+      align-items: center;
       margin-top: 1rem;
 
       li {
@@ -191,6 +221,7 @@
         .time {
           font-size: 3rem;
         }
+
         .Todolist {
           h1 {
             font-size: 2rem;
@@ -316,6 +347,21 @@
               font-weight: 300;
             }
           }
+        }
+      }
+      .calendarbg {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        h3 {
+          font-weight: 400;
+          transition: 0.3s;
+          cursor: pointer;
+        }
+        h3:hover {
+          color: aqua;
+          transform: scale(1.1);
+          transition: 0.3s;
         }
       }
       .rightNavibar-btn {
@@ -502,7 +548,7 @@
   }
   .navibar-rightChange {
     transition: 0.3s;
-    right: -22rem;
+    transform: translateX(22rem);
   }
 }
 

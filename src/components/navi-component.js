@@ -39,6 +39,10 @@ function naviComponent({
   const [rightNavibar, setRightNavibar] = useState(false);
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [leftNavibar, setLeftNavibar] = useState(false);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [avatartext, setAvatartext] = useState(false);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [calendarOpen, setCalendarOpen] = useState(false);
 
   const searchNbaData = async () => {
     setNbaLoadding(true);
@@ -68,12 +72,23 @@ function naviComponent({
       setLeftNavibar(false);
     }
   };
+  const handleText = () => {
+    if (window.innerHeight < 700) {
+      setAvatartext(true);
+      setCalendarOpen(false);
+    } else {
+      setAvatartext(false);
+      setCalendarOpen(true);
+    }
+  };
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     window.addEventListener("resize", handlerwd);
+    window.addEventListener("resize", handleText);
     return () => {
       window.removeEventListener("resize", handlerwd);
+      window.removeEventListener("resize", handleText);
     };
   });
 
@@ -82,10 +97,26 @@ function naviComponent({
       <div
         className={`navibar-left ${leftNavibar ? "navibar-leftChange" : ""}`}
       >
-        <div className="avatarImg">
-          <img src={avatarImg} alt="avatarImg" />
+        <div className="avatarImg-box">
+          <div className="avatarImg">
+            <img src={avatarImg} alt="avatarImg" />
+          </div>
+
+          <div
+            className="avatar-textClose-btn"
+            onClick={() => {
+              if (avatartext) {
+                setAvatartext(false);
+              } else {
+                setAvatartext(true);
+              }
+            }}
+          >
+            <img src={leftArrow} alt="arrow-img" />
+          </div>
         </div>
-        <div className="avatar-text">
+
+        <div className={`avatar-text ${avatartext ? "avatar-textClose" : ""}`}>
           <h2>CHIN SHIH HAO</h2>
           <ul>
             <li>Birthday : 8 October 1989 </li>
@@ -167,9 +198,6 @@ function naviComponent({
       >
         <ul>
           <li>
-            <WeatherData />
-          </li>
-          <li>
             <Clock
               className="time"
               format={"HH:mm:ss"}
@@ -178,7 +206,36 @@ function naviComponent({
             />
           </li>
           <li>
-            <Calender conChange={setCalendarValue} value={calendarValue} />
+            <WeatherData />
+          </li>
+          <li className="calendarbg">
+            <h3
+              onClick={() => {
+                if (calendarOpen) {
+                  setCalendarOpen(false);
+                } else {
+                  setCalendarOpen(true);
+                }
+              }}
+            >
+              月曆
+            </h3>
+            {calendarOpen && (
+              <Calender conChange={setCalendarValue} value={calendarValue} />
+            )}
+          </li>
+
+          <li
+            className="rightNavibar-btn"
+            onClick={() => {
+              if (rightNavibar) {
+                setRightNavibar(false);
+              } else {
+                setRightNavibar(true);
+              }
+            }}
+          >
+            <img src={leftArrow} alt="arrow-img" />
           </li>
           <li
             className="nba-title"
@@ -205,6 +262,7 @@ function naviComponent({
           >
             <p>MLB當日比分</p>
           </li>
+
           {mlbLoadding === true && (
             <li className="loaddingImg">
               <img src={loaddingImg} alt="loadding-img" />
@@ -219,19 +277,6 @@ function naviComponent({
           )}
           <li>
             <Todolist />
-          </li>
-
-          <li
-            className="rightNavibar-btn"
-            onClick={() => {
-              if (rightNavibar) {
-                setRightNavibar(false);
-              } else {
-                setRightNavibar(true);
-              }
-            }}
-          >
-            <img src={leftArrow} alt="arrow-img" />
           </li>
         </ul>
       </div>

@@ -21,6 +21,7 @@
       font-size: 5rem;
       font-weight: 400;
       color: #fff;
+      margin: 0 1rem;
     }
     p {
       font-size: 3rem;
@@ -30,6 +31,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 3rem;
+      justify-content: center;
 
       .contact-card {
         display: flex;

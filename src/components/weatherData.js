@@ -39,18 +39,7 @@ const weatherData = () => {
       </p>
       {weatherData && (
         <div className="weatherData">
-          <h1>
-            {weatherData.name}{" "}
-            <span
-              className="weatherClose"
-              onClick={() => {
-                if (weatherData) {
-                  setWeatherData("");
-                  setIsWeatherData(false);
-                }
-              }}
-            ></span>
-          </h1>
+          <h1>{weatherData.name}</h1>
           <p>
             <span>溫度</span>
             <span> : </span>

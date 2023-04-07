@@ -4,6 +4,231 @@
   box-sizing: border-box;
 }
 
+@media screen and (max-height: 1000px) {
+  .navibar {
+    .navibar-left {
+      .avatarImg-box {
+        .avatarImg {
+          height: 100px !important;
+          width: 100px !important;
+          border-radius: 50% !important;
+          img {
+            height: 120px !important;
+            width: 120px !important;
+          }
+        }
+        .avatar-textClose-btn {
+          height: 30px !important;
+          width: 30px !important;
+        }
+      }
+      .avatar-text {
+        h2 {
+          font-size: 1rem !important;
+        }
+      }
+      .navibar-menu {
+        ul {
+          font-size: 1rem !important;
+          li {
+            width: 150px !important;
+            padding: 5px !important;
+            a {
+              span {
+                img {
+                  height: 1.5rem !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .navibar-right {
+      ul {
+        font-size: 1.5rem !important;
+        li {
+          .time {
+            font-size: 2rem !important;
+          }
+          .Todolist {
+            h1 {
+              font-size: 1.5rem !important;
+            }
+            .TodoForm {
+              input {
+                font-size: 1.5rem !important;
+              }
+              button {
+                font-size: 1rem !important;
+              }
+            }
+          }
+        }
+
+        .calendarbg {
+          width: 22rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .react-calendar {
+            width: 300px !important;
+            height: 300px !important;
+          }
+        }
+      }
+    }
+  }
+
+  .portfolio-bg {
+    .portfolio-title {
+      margin-top: 0.5rem !important;
+      h1 {
+        font-size: 3rem !important;
+      }
+      h2 {
+        margin-top: 1rem !important;
+        margin-bottom: 0.5rem !important;
+      }
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .navibar {
+    .navibar-left {
+      width: 16rem !important;
+    }
+    .navibar-leftChange {
+      transform: translateX(-16rem) !important;
+    }
+    .navibar-right {
+      width: 19rem !important;
+
+      .calendarbg {
+        width: 19rem !important;
+      }
+    }
+    .navibar-rightChange {
+      transform: translateX(19rem) !important;
+    }
+  }
+  .homepage-bg {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    padding-top: 5rem !important;
+
+    .homepage {
+      width: 90%;
+
+      .homepage-left {
+        width: 90% !important;
+        h1 {
+          font-size: 2rem !important;
+        }
+        .blob {
+          display: none !important;
+        }
+      }
+      .homepage-right {
+        .cube-box {
+          margin-left: 8rem !important;
+        }
+      }
+    }
+  }
+  .skill-bg {
+    h1 {
+      font-size: 2rem !important;
+    }
+    .skill-content {
+      .exprience-box {
+        h1 {
+          font-size: 2rem !important;
+        }
+        button {
+          font-size: 1rem !important;
+        }
+        button:hover {
+          letter-spacing: 5px !important;
+        }
+      }
+    }
+  }
+  .portfolio-bg {
+    .portfolio-title {
+      h1 {
+        font-size: 3rem !important;
+      }
+      h2 {
+        margin-top: 1.5rem !important;
+      }
+    }
+    .portfolio-box {
+      row-gap: 10rem !important;
+      .portfolio-card {
+        width: 300px !important;
+        height: 200px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .aboutmepage {
+    .aboutme-box {
+      .timeline {
+        transform: none !important;
+        margin-top: 10rem !important;
+        .container {
+          width: 95% !important;
+        }
+      }
+    }
+  }
+  .contactme-bg {
+    .contactme-title {
+      h1 {
+        font-size: 2.5rem !important;
+      }
+      p {
+        font-size: 2rem !important;
+      }
+      .contact-card-box {
+        .contact-card {
+          p {
+            font-size: 1rem !important;
+          }
+        }
+      }
+    }
+
+    .contactUsbg {
+      .contactUsContainer {
+        .contactUs {
+          width: 100vw !important;
+          p {
+            font-size: 3rem !important;
+          }
+          form {
+            input {
+              width: 95vw !important;
+              font-size: 1rem !important;
+            }
+            textarea {
+              width: 95vw !important;
+              font-size: 1rem !important;
+            }
+            button {
+              font-size: 1rem !important;
+              padding: 0.5rem 1rem !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @import "../styles/navi";
 @import "../styles/homepage";
 @import "../styles/aboutpage";

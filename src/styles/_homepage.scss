@@ -1,5 +1,5 @@
 .homepage-bg {
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -10,9 +10,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30rem;
+    gap: 25rem;
+
     flex-wrap: wrap;
-    width: 1600px;
+    max-width: 1600px;
     .homepage-left {
       width: 600px;
       display: flex;
