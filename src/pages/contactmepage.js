@@ -50,17 +50,17 @@ const contactmepage = ({
         <h1>如果有任何疑問</h1>
         <p>歡迎隨時與我聯絡</p>
         <div className="contact-card-box">
-          <div className="contact-card card-1">
+          <div className="contact-card ">
             <img src={phoneImg} alt="phoneImg" />
             <h3>聯絡電話</h3>
             <p>0916952516</p>
           </div>
-          <div className="contact-card card-2">
+          <div className="contact-card ">
             <img src={emailImg} alt="email-img" />
             <h3>電子郵件</h3>
             <p>shihhao108@gmail.com</p>
           </div>
-          <div className="contact-card card-3">
+          <div className="contact-card ">
             <img src={githubImg} alt="github-img" />
             <h3>Github</h3>
             <p>https://github.com/shihhaochin</p>

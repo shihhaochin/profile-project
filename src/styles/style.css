@@ -66,6 +66,9 @@
     margin-top: 1rem !important;
     margin-bottom: 0.5rem !important;
   }
+  .portfolio-bg .portfolio-title span {
+    display: none !important;
+  }
 }
 @media screen and (max-width: 500px) {
   .navibar .navibar-left {
@@ -97,6 +100,10 @@
   .homepage-bg .homepage .homepage-left h1 {
     font-size: 2rem !important;
   }
+  .homepage-bg .homepage .homepage-left button {
+    width: 200px !important;
+    padding: 1rem 1rem !important;
+  }
   .homepage-bg .homepage .homepage-left .blob {
     display: none !important;
   }
@@ -123,10 +130,32 @@
   }
   .portfolio-bg .portfolio-box {
     row-gap: 10rem !important;
+    max-width: 90% !important;
+    margin: 0 1rem !important;
+    margin-bottom: 15rem !important;
   }
   .portfolio-bg .portfolio-box .portfolio-card {
     width: 300px !important;
     height: 200px !important;
+  }
+  .portfolio-bg .portfolio-box .portfolio-card .portfolioImg .portfolioImg03 .imgfilter03 .img-box03 .img-content03 {
+    gap: 1rem !important;
+  }
+  .portfolio-bg .portfolio-box .portfolio-card .portfolioImg .portfolioImg03 .imgfilter03 .img-box03 .img-content03 p {
+    font-size: 0.5rem;
+  }
+  .portfolio-bg .portfolio-box .portfolio-card::before {
+    transform: perspective(5em) rotateX(30deg) scale(1, 0.3) !important;
+  }
+  .contactme-bg .contactme-title .contact-card-box {
+    width: 100% !important;
+    gap: 1rem !important;
+  }
+  .contactme-bg .contactme-title .contact-card-box .contact-card {
+    margin-left: 0 !important;
+  }
+  .contactme-bg .meteor-box {
+    display: none !important;
   }
 }
 @media screen and (max-width: 1300px) {
@@ -138,10 +167,10 @@
     width: 95% !important;
   }
   .contactme-bg .contactme-title h1 {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
   }
   .contactme-bg .contactme-title p {
-    font-size: 2rem !important;
+    font-size: 1rem !important;
   }
   .contactme-bg .contactme-title .contact-card-box .contact-card p {
     font-size: 1rem !important;
@@ -150,7 +179,7 @@
     width: 100vw !important;
   }
   .contactme-bg .contactUsbg .contactUsContainer .contactUs p {
-    font-size: 3rem !important;
+    font-size: 2rem !important;
   }
   .contactme-bg .contactUsbg .contactUsContainer .contactUs form input {
     width: 95vw !important;
@@ -163,6 +192,10 @@
   .contactme-bg .contactUsbg .contactUsContainer .contactUs form button {
     font-size: 1rem !important;
     padding: 0.5rem 1rem !important;
+    margin-bottom: 1rem;
+  }
+  .portfolio-bg .portfolio-title span {
+    display: none;
   }
 }
 .navibar {
@@ -175,7 +208,7 @@
   width: 21rem;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   position: absolute;
   gap: 4rem;
@@ -357,7 +390,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   list-style: none;
   font-size: 2rem;
   height: 100vh;
@@ -432,6 +465,7 @@
 }
 .navibar .navibar-right ul li .Todolist .Todo div {
   cursor: pointer;
+  margin-right: 1rem;
 }
 .navibar .navibar-right ul li .react-calendar__month-view__weekdays {
   color: black;
@@ -1799,7 +1833,6 @@
   margin-bottom: 5rem;
   z-index: 3;
   background-color: black;
-  position: relative;
   padding: 1rem 0;
 }
 .portfolio-bg .portfolio-title span {
@@ -1856,7 +1889,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 3rem;
 }
 .portfolio-bg .portfolio-box .portfolio-card .portfolioImg .portfolioImg01 .imgfilter01 .img-box01 img {
@@ -1904,7 +1937,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 3rem;
 }
 .portfolio-bg .portfolio-box .portfolio-card .portfolioImg .portfolioImg02 .imgfilter02 .img-box02 img {
@@ -1952,7 +1985,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 3rem;
 }
 .portfolio-bg .portfolio-box .portfolio-card .portfolioImg .portfolioImg03 .imgfilter03 .img-box03 img {
