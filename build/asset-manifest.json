@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "./static/css/main.2168da33.css",
+    "main.css": "./static/css/main.0b4f82c4.css",
     "main.js": "./static/js/main.271c0aa1.js",
     "static/media/contactImg.png": "./static/media/contactImg.33dc547f7042888e2a5b.png",
-    "static/media/portfolio02.png": "./static/media/portfolio02.db5f30c537d7e5a5e02c.png",
-    "static/media/portfolio03.png": "./static/media/portfolio03.6ca44a62001ea99b49ad.png",
-    "static/media/portfolio01.png": "./static/media/portfolio01.e0442477b545163461a1.png",
     "static/media/aboutUs.png": "./static/media/aboutUs.52ca22ea4a4fc18c0938.png",
+    "static/media/portfolio02.png": "./static/media/portfolio02.49c6c44eeed76840b6ba.png",
+    "static/media/portfolio03.png": "./static/media/portfolio03.1758eb52ee989d41ba76.png",
+    "static/media/portfolio01.png": "./static/media/portfolio01.f5915ec3b7a5a2f22f21.png",
     "static/media/React.png": "./static/media/React.f6b89d232c9bc9f828e5.png",
     "static/media/hotel.png": "./static/media/hotel.179f27617f80aa1a6388.png",
     "static/media/nodejs.png": "./static/media/nodejs.007e99f68b718e476aba.png",
@@ -25,11 +25,11 @@
     "static/media/phone-call.png": "./static/media/phone-call.20a0ed4204215b0502d9.png",
     "static/media/user.png": "./static/media/user.33e7df0963941edbeb70.png",
     "index.html": "./index.html",
-    "main.2168da33.css.map": "./static/css/main.2168da33.css.map",
+    "main.0b4f82c4.css.map": "./static/css/main.0b4f82c4.css.map",
     "main.271c0aa1.js.map": "./static/js/main.271c0aa1.js.map"
   },
   "entrypoints": [
-    "static/css/main.2168da33.css",
+    "static/css/main.0b4f82c4.css",
     "static/js/main.271c0aa1.js"
   ]
 }
