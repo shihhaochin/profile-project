@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "./static/css/main.2168da33.css",
+    "main.js": "./static/js/main.271c0aa1.js",
+    "static/media/contactImg.png": "./static/media/contactImg.33dc547f7042888e2a5b.png",
+    "static/media/portfolio02.png": "./static/media/portfolio02.db5f30c537d7e5a5e02c.png",
+    "static/media/portfolio03.png": "./static/media/portfolio03.6ca44a62001ea99b49ad.png",
+    "static/media/portfolio01.png": "./static/media/portfolio01.e0442477b545163461a1.png",
+    "static/media/aboutUs.png": "./static/media/aboutUs.52ca22ea4a4fc18c0938.png",
+    "static/media/React.png": "./static/media/React.f6b89d232c9bc9f828e5.png",
+    "static/media/hotel.png": "./static/media/hotel.179f27617f80aa1a6388.png",
+    "static/media/nodejs.png": "./static/media/nodejs.007e99f68b718e476aba.png",
+    "static/media/highschool.png": "./static/media/highschool.7a69587fe764b638e886.png",
+    "static/media/soldier.png": "./static/media/soldier.4c919df4a4f2cb55f665.png",
+    "static/media/github.png": "./static/media/github.a5527b5c02e754fc4a6d.png",
+    "static/media/Dayeh.png": "./static/media/Dayeh.4386fa743be746b66109.png",
+    "static/media/googleImg.png": "./static/media/googleImg.6eb0d7e6ec3da4b1b1d2.png",
+    "static/media/instagramImg.png": "./static/media/instagramImg.bc603acad2a8cb3bd098.png",
+    "static/media/twitterImg.png": "./static/media/twitterImg.8e65601e69067aadfe55.png",
+    "static/media/jsImg.png": "./static/media/jsImg.78206ba65e01c7d57080.png",
+    "static/media/html.png": "./static/media/html.cfb2ba4a6b1c3de295bc.png",
+    "static/media/loading.png": "./static/media/loading.d531c5ab45f46ce83395.png",
+    "static/media/skills.png": "./static/media/skills.6326802cc236aaa80e67.png",
+    "static/media/css.png": "./static/media/css.4a6549b8c2b4cda8bb88.png",
+    "static/media/phone-call.png": "./static/media/phone-call.20a0ed4204215b0502d9.png",
+    "static/media/user.png": "./static/media/user.33e7df0963941edbeb70.png",
+    "index.html": "./index.html",
+    "main.2168da33.css.map": "./static/css/main.2168da33.css.map",
+    "main.271c0aa1.js.map": "./static/js/main.271c0aa1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2168da33.css",
+    "static/js/main.271c0aa1.js"
+  ]
+}
