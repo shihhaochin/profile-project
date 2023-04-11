@@ -46,7 +46,9 @@ function naviComponent({
 
   const searchNbaData = async () => {
     setNbaLoadding(true);
-    const dataFetch = await fetch("http://localhost:8000/api/user/nbaApi");
+    const dataFetch = await fetch(
+      "https://nba-prod-us-east-1-mediaops-stats.s3.amazonaws.com/NBA/liveData/scoreboard/todaysScoreboard_00.json"
+    );
 
     let parseData = await dataFetch.json();
     setNbaData(parseData);
@@ -54,9 +56,13 @@ function naviComponent({
       setNbaLoadding(false);
     }
   };
+  const today = new Date();
+  let d = today.getDate() - 1;
   const searchMlbData = async () => {
     setMlbLoadding(true);
-    const dataFetch = await fetch("http://localhost:8000/api/user/mlbApi");
+    const dataFetch = await fetch(
+      `https://bdfed.stitch.mlbinfra.com/bdfed/transform-mlb-scoreboard?stitch_env=prod&sortTemplate=4&sportId=1&&sportId=51&startDate=2023-04-${d}&endDate=2023-04-${d}&gameType=E&&gameType=S&&gameType=R&&gameType=F&&gameType=D&&gameType=L&&gameType=W&&gameType=A&&gameType=C&language=en&leagueId=104&&leagueId=103&&leagueId=160`
+    );
     let parseData = await dataFetch.json();
     setMlbData(parseData);
     if (parseData) {
