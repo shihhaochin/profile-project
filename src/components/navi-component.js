@@ -47,7 +47,7 @@ function naviComponent({
   const searchNbaData = async () => {
     setNbaLoadding(true);
     const dataFetch = await fetch(
-      "https://nba-prod-us-east-1-mediaops-stats.s3.amazonaws.com/NBA/liveData/scoreboard/todaysScoreboard_00.json"
+      "https://erin-bear-hem.cyclic.app/api/user/nbaApi"
     );
 
     let parseData = await dataFetch.json();
@@ -56,13 +56,11 @@ function naviComponent({
       setNbaLoadding(false);
     }
   };
-  const today = new Date();
-  let d = today.getDate() - 1;
-  let m = today.getMonth() + 1;
+
   const searchMlbData = async () => {
     setMlbLoadding(true);
     const dataFetch = await fetch(
-      `https://bdfed.stitch.mlbinfra.com/bdfed/transform-mlb-scoreboard?stitch_env=prod&sortTemplate=4&sportId=1&&sportId=51&startDate=2023-${m}-${d}&endDate=2023-${m}-${d}&gameType=E&&gameType=S&&gameType=R&&gameType=F&&gameType=D&&gameType=L&&gameType=W&&gameType=A&&gameType=C&language=en&leagueId=104&&leagueId=103&&leagueId=160`
+      "https://erin-bear-hem.cyclic.app/api/user/mlbApi"
     );
     let parseData = await dataFetch.json();
     setMlbData(parseData);
